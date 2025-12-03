@@ -1,7 +1,53 @@
+/*!!!!!!!!!!
+Hører til Yatzy
+SPILLET ER STADIG UNDER UDVIKLING OG VIRKER IKKE ENDNU
+!!!!!!!!!!*/
+
 namespace Terningespil;
 
 public class Scoreboard
 {
+    public int Enner { get; set; }
+    public int Toere { get; set; }
+    public int Treere { get; set; }
+    public int Firere { get; set; }
+    public int Femere { get; set; }
+    public int Seksere { get; set; }
+    public int EtPar { get; set; }
+    public int ToPar { get; set; }
+    public int TreEns { get; set; }
+    public int FireEns { get; set; }
+    public int LilleStraight { get; set; }
+    public int StorStraight { get; set; }
+    public int FuldtHus { get; set; }
+    public int Chance { get; set; }
+    public int Yatzy { get; set; }
+
+    public string VisScorecard()
+    {
+        return $@"
+    Øvre del:
+    Énner: {Enner}
+    To’ere: {Toere}
+    Tre’ere: {Treere}
+    Fir’ere: {Firere}
+    Fem’ere: {Femere}
+    Seks’ere: {Seksere}
+
+    Nedre del:
+    Ét par: {EtPar}
+    To par: {ToPar}
+    Tre ens: {TreEns}
+    Fire ens: {FireEns}
+    Lille straight: {LilleStraight}
+    Stor straight: {StorStraight}
+    Fuldt hus: {FuldtHus}
+    Chance: {Chance}
+    Yatzy: {Yatzy}
+    ";
+    }
+}
+
 
     /*5 terninger, 15 runder
     Enere (5)
@@ -47,4 +93,3 @@ public class Scoreboard
     Yatzy 5 ens (50)
     Sum
     */  
-}

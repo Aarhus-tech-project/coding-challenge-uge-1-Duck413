@@ -26,3 +26,18 @@ C:\Users\Peder\Data og kommunikation\02. H1\Modul 04, Grundlæggende programmeri
 C:\Users\Peder\Data og kommunikation\02. H1\Modul 04, Grundlæggende programmering\Mine kodnings opgaver\Terningespil + Yatzy\Terningespil\obj\Debug\net10.0\Terningespil.pdb
 C:\Users\Peder\Data og kommunikation\02. H1\Modul 04, Grundlæggende programmering\Mine kodnings opgaver\Terningespil + Yatzy\Terningespil\obj\Debug\net10.0\Terningespil.genruntimeconfig.cache
 C:\Users\Peder\Data og kommunikation\02. H1\Modul 04, Grundlæggende programmering\Mine kodnings opgaver\Terningespil + Yatzy\Terningespil\obj\Debug\net10.0\ref\Terningespil.dll
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\bin\Debug\net10.0\Terningespil.exe
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\bin\Debug\net10.0\Terningespil.deps.json
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\bin\Debug\net10.0\Terningespil.runtimeconfig.json
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\bin\Debug\net10.0\Terningespil.dll
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\bin\Debug\net10.0\Terningespil.pdb
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.AssemblyInfoInputs.cache
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.AssemblyInfo.cs
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.csproj.CoreCompileInputs.cache
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.sourcelink.json
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.dll
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\refint\Terningespil.dll
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.pdb
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\Terningespil.genruntimeconfig.cache
+C:\Users\Peder\Documents\GitHub\coding-challenge-uge-1-Duck413\obj\Debug\net10.0\ref\Terningespil.dll

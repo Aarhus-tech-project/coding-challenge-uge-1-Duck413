@@ -1,3 +1,7 @@
+/*!!!!!!!!!!
+SPILLET ER STADIG UNDER UDVIKLING OG VIRKER IKKE ENDNU
+!!!!!!!!!!*/
+
 namespace Terningespil;
 
 public class Yatzy
@@ -28,7 +32,7 @@ public class Yatzy
             while (antalSpillere < 2 || antalSpillere > 6)
             {
                 Console.WriteLine("\n" +
-                "Ugyldigt antal valgt. Vælg et tal mellem 2 og 4:");
+                "Ugyldigt antal valgt. Vælg et tal mellem 2 og 6:");
                 antalSpillere = Convert.ToInt32(Console.ReadLine());
             }
             Spiller[] spillere = new Spiller[antalSpillere];
@@ -41,7 +45,6 @@ public class Yatzy
                 spillere[s] = new Spiller(navn, false);
             }
         
-
             //Vælg antal terninger og sæt sider til 6
             Console.WriteLine(
                 "\n" +

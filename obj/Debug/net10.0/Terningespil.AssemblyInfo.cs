@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Terningespil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7896528ec3690db0aa6943b05ec89b18f8327284")]
 [assembly: System.Reflection.AssemblyProductAttribute("Terningespil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Terningespil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Peder\\Data og kommunikation\\02. H1\\Modul 04, Grundlæggende programmering\\Mine kodnings opgaver\\Terningespil\\Terningespil\\Terningespil.csproj": {}
+    "C:\\Users\\Peder\\Documents\\GitHub\\coding-challenge-uge-1-Duck413\\Terningespil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Peder\\Data og kommunikation\\02. H1\\Modul 04, Grundlæggende programmering\\Mine kodnings opgaver\\Terningespil\\Terningespil\\Terningespil.csproj": {
+    "C:\\Users\\Peder\\Documents\\GitHub\\coding-challenge-uge-1-Duck413\\Terningespil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Peder\\Data og kommunikation\\02. H1\\Modul 04, Grundlæggende programmering\\Mine kodnings opgaver\\Terningespil\\Terningespil\\Terningespil.csproj",
+        "projectUniqueName": "C:\\Users\\Peder\\Documents\\GitHub\\coding-challenge-uge-1-Duck413\\Terningespil.csproj",
         "projectName": "Terningespil",
-        "projectPath": "C:\\Users\\Peder\\Data og kommunikation\\02. H1\\Modul 04, Grundlæggende programmering\\Mine kodnings opgaver\\Terningespil\\Terningespil\\Terningespil.csproj",
+        "projectPath": "C:\\Users\\Peder\\Documents\\GitHub\\coding-challenge-uge-1-Duck413\\Terningespil.csproj",
         "packagesPath": "C:\\Users\\Peder\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Peder\\Data og kommunikation\\02. H1\\Modul 04, Grundlæggende programmering\\Mine kodnings opgaver\\Terningespil\\Terningespil\\obj\\",
+        "outputPath": "C:\\Users\\Peder\\Documents\\GitHub\\coding-challenge-uge-1-Duck413\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

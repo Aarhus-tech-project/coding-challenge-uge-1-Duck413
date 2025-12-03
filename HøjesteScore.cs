@@ -2,10 +2,9 @@ namespace Terningespil;
 
 public class HøjesteScore
 {
-    public void Start()
+    public void SpilStart()
     {
-        Console.WriteLine(
-            "\n" +
+        Console.WriteLine("\n" +
             "VELKOMMEN TIL HØJESTE SCORE!\n" +
             "\n" +
             "Dette spil er for 2-6 spillere, og reglerne er som følgende:\n" +
@@ -19,85 +18,72 @@ public class HøjesteScore
         string køreSpillet = "j";
         while (køreSpillet == "j")
         {
-            //Vælg antal spillere
-            Console.WriteLine("Vælg hvor mange spillere (2-6) og tryk enter:");
-            int antalSpillere = Convert.ToInt32(Console.ReadLine());
-            while (antalSpillere < 2 || antalSpillere > 6)
-            {
-                Console.WriteLine("\n" +
-                "Ugyldigt antal valgt. Vælg et tal mellem 2 og 6:");
-                antalSpillere = Convert.ToInt32(Console.ReadLine());
-            }
+            // Vælg antal spillere            
+            int antalSpillere = BrugerInput.ValgtTal("Vælg hvor mange spillere (2-6) og tryk enter:\n", 2, 6);
             Spiller[] spillere = new Spiller[antalSpillere];
+            List<string> valgteNavne = new List<string>();
+
             for (int s = 0; s < antalSpillere; s++)
             {
-                Console.WriteLine(
-                    "\n" +
-                    $"Er spiller {s + 1} en computer? Tast j/n og tryk enter:");
-                string svar = Console.ReadLine().ToLower();
-                while (svar != "j" && svar != "n")
-                {
-                    Console.WriteLine("\n" +
-                        "Ugyldig indtastning. Tast j for ja eller n for nej:");
-                    svar = Console.ReadLine().ToLower();
-                }
-                bool erComputer = svar == "j";
+                string spillerType = BrugerInput.JaEllerNej("\n" +
+                    $"Er spiller {s + 1} en computer? Tast j/n og tryk enter:\n");
+                bool erComputer = spillerType == "j";
                 if (erComputer)
                 {
                     spillere[s] = new Spiller($"Computer {s + 1}", true);
+                    valgteNavne.Add($"Computer {s + 1}");
                 }
                 else
                 {
-                    Console.WriteLine(
-                        "\n" +
+                    Console.WriteLine("\n" +
                         $"Indtast navn for spiller {s + 1} og tryk enter:");
-                    string? navn = Console.ReadLine();
+                    string navn = Console.ReadLine();
+                    string testNavn = navn.ToLower();
+                    string[] forbudteOrd = {"computer", "ai", "pc"};
+                            
+                    while(valgteNavne.Contains(testNavn))
+                    {
+                        Console.WriteLine("\n" +
+                            $"Navnet er allerede taget, prøv igen med et nyt navn:");
+                        navn = Console.ReadLine();
+                        testNavn = navn.ToLower();
+                    }
+                    while(forbudteOrd.Contains(testNavn))
+                    {
+                        Console.WriteLine("\n" +
+                            $"Navnet er ikke tilladt, prøv igen med et nyt navn:");
+                        navn = Console.ReadLine();
+                        testNavn = navn.ToLower();
+                    }
                     spillere[s] = new Spiller(navn, false);
+                    valgteNavne.Add(testNavn);
                 }
             }
 
             //Vælg type af terninger
-            Console.WriteLine(
-                "\n" +
+            int typeTerning = BrugerInput.ValgtTal("\n" +
                 "Vælg hvilken type af terninger der skal bruges og tryk enter:\n" +
                 "Tast 1 for en sekssidet terning\n" +
                 "Tast 2 for en tolvsidet terning\n" +
-                "Tast 3 for en tyvesidet terning");
-            int typeTerning = Convert.ToInt32(Console.ReadLine());
-            while (typeTerning < 1 || typeTerning > 3)
-            {
-                Console.WriteLine("\n" +
-                    "Ugyldig type valgt. Vælg 1, 2 eller 3:");
-                typeTerning = Convert.ToInt32(Console.ReadLine());
-            }
+                "Tast 3 for en tyvesidet terning\n", 1, 3);
             int sider = typeTerning == 1 ? 6 : typeTerning == 2 ? 12 : 20;
 
             //Vælg antal terninger
-            Console.WriteLine(
-                "\n" +
-                "Vælg hvor mange terninger der skal bruge (1-6 stk.) og tryk enter:");
-            int antalTerninger = Convert.ToInt32(Console.ReadLine());
-            while (antalTerninger < 1 || antalTerninger > 6)
-            {
-                Console.WriteLine("\n" +
-                    "Ugyldigt antal valgt. Vælg et tal mellem 1 og 6:");
-                antalTerninger = Convert.ToInt32(Console.ReadLine());
-            }
+            int antalTerninger = BrugerInput.ValgtTal("\n" +
+                "Vælg hvor mange terninger der skal bruge (1-6 stk.) og tryk enter:\n", 1, 6);
 
             if (antalTerninger == 1)
             {
-                Console.WriteLine(
-                "\n" +
-                $"Spillet vil starte med {antalTerninger} styk {sider}-sidet terning\n");
+                Console.WriteLine("\n" +
+                $"Spillet vil starte med {antalTerninger} styk {sider}-sidet terning");
             }
             else
             {     
-                Console.WriteLine(
-                "\n" +
-                $"Spillet vil starte med {antalTerninger} styk {sider}-sidet terninger\n");
+                Console.WriteLine("\n" +
+                $"Spillet vil starte med {antalTerninger} styk {sider}-sidet terninger");
             }
             
-            Console.WriteLine("Tryk på enter for at starte runde 1");
+            Console.WriteLine("Tryk på enter for at starte runde 1:");
             Console.ReadLine();    
 
             //Lav de valgte terninger og rul dem
@@ -109,23 +95,21 @@ public class HøjesteScore
                     int kast = s.KastTerninger(antalTerninger, sider);
                     if (s.ErComputer)
                     {
-                        Console.WriteLine(
-                            "\n" +
+                        Console.WriteLine("\n" +
                             $"{s.Navn} har fået {kast} points denne runde\n" +
                             $"{s.Navn} har samlet {s.TotalScore} points");
                     }
                     else
                     {
-                        Console.WriteLine($"{s.Navn}, tryk enter for at se din totale score");
+                        Console.WriteLine($"{s.Navn}, tryk enter for at se din totale score:");
                         Console.ReadLine();
                         Console.WriteLine($"{s.Navn} har fået en samlet score på {s.TotalScore}");
                     }
-                    Console.WriteLine("Tryk enter for at fortsætte");
+                    Console.WriteLine("Tryk enter for at fortsætte:");
                     Console.ReadLine();
                 } 
-                Console.WriteLine(
-                    $"Runde {i} er slut\n" +
-                    "Tryk enter for at fortsætte");
+                Console.WriteLine($"Runde {i} er slut\n" +
+                    "Tryk enter for at fortsætte:");
                 Console.ReadLine();
             }
 
@@ -160,17 +144,13 @@ public class HøjesteScore
             Console.WriteLine("");
 
             //Afslutning
-            Console.WriteLine("Ønskes der et spil til? Tast j/n og tryk enter)");
-            køreSpillet = Console.ReadLine().ToLower();
-            while (køreSpillet != "j" && køreSpillet != "n")
-            {
-                Console.WriteLine("Ugyldig indtastning. Tast j for ja eller n for nej:");
-                køreSpillet = Console.ReadLine().ToLower();
-            }
+            string nytSpil = BrugerInput.JaEllerNej("\n" +
+                "Ønskes der et spil til? Tast j/n og tryk enter:\n");
+            køreSpillet = nytSpil;
             Console.Clear();
         }
         Console.WriteLine("Tak for spillet!\n" +
-        "Tryk på enter for at vende tilbage til menuen");
+        "Tryk på enter for at vende tilbage til menuen:");
         Console.ReadLine();
     }
 }

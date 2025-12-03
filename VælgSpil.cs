@@ -2,35 +2,29 @@ namespace Terningespil;
 
 public class VælgSpil
 {
-    public void Start()
+    public void ProgramStart()
     {
         bool kørProgram = true;
         while (kørProgram)
         {
-            Console.WriteLine(
-                "\n" +
+            Console.WriteLine("\n" +
                 "VELKOMMEN TIL TERNINGESPILLET!\n" +
                 "\n" +
-                "I dette spil kan der vælges mellem flere forskellige terningespil.\n" +
-                "Man kan spille mod andre spillere eller mod computeren.\n" +
+                "I dette spil kan der vælges mellem flere forskellige terningespil\n" +
+                "Man kan spille mod andre spillere eller mod computeren\n" +
+                "For at forlade et spil før det er færdigt tryk på Esc\n" +
                 "\n" +
                 "Indtast nummeret for det valgte spil, og tryk enter:\n" +
                     "1: Højeste Score\n" +
-                    "2: Yatzy (spillet er stadig under udvikling)\n" +
+                    "2: Yatzy (SPILLET ER STADIG UNDER UDVIKLING OG VIRKER IKKE ENDNU)\n" +
                     "0: Afslut spillet");
-            int valgtSpil = Convert.ToInt32(Console.ReadLine());
-            while (valgtSpil < 0 || valgtSpil > 2)
-            {
-                Console.WriteLine("\n" +
-                "Ugyldigt spil valgt. Vælg et tal mellem 1 og 2:");
-                valgtSpil = Convert.ToInt32(Console.ReadLine());
-            }
-            
+
+            int valgtSpil = BrugerInput.ValgtTal("", 0, 2);
             switch (valgtSpil)
             {
                 case 1:
                     HøjesteScore spil = new HøjesteScore();
-                    spil.Start();
+                    spil.SpilStart();
                     break;
                 case 2:
                     Yatzy spil2 = new Yatzy();
@@ -39,14 +33,11 @@ public class VælgSpil
                 case 0:
                     kørProgram = false;
                     break;
-                default:
-                    Console.WriteLine("Ugyldigt valg. Vælg et tal mellem 0 og 2:");
-                    break;
             }
         }
         Console.WriteLine("\n" +
             "Tak for at spille Terningespillet!\n" +
-            "Tryk på enter for at afslutte programmet");
+            "Tryk på enter for at afslutte programmet:");
         Console.ReadLine();
     }
 }
